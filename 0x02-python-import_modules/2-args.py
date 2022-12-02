@@ -4,9 +4,13 @@ if __name__ == "__main__":
     arg_count = len(sys.argv)
     if arg_count == 1:
         print("0 arguments.")
-    if arg_count > 1:
+    lim = 2
+    if arg_count == lim:
+        print("1 argument:")
+        print("1: {}".format(sys.argv[1]))
+    if arg_count > lim:
         count = len(sys.argv) - 1
-        print("{} argument:".format(count))
+        print("{} arguments:".format(count))
         index = 1
         while index <= count:
             argument = sys.argv[index]
